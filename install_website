@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# execute this from your logic.at account to install the website
+#
+DESTDIR=/home/httpd/html/gapt
+
+cp index.html logo.png style.css valid-html401.png $DESTDIR
