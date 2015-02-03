@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Gapt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="content">
+
+<table>
+<tr>
+<td><img src="logo.png" alt="gapt logo"></td>
+<td style="padding-left: 20px;"><h1>GAPT: General Architecture for Proof Theory</h1></td>
+</table>
+
+<p>
+Gapt is a proof theory framework developed primarily at the <a href="http://www.tuwien.ac.at/">Vienna University of Technology</a>.
+Gapt contains data structures, algorithms, parsers and other components common in
+proof theory and automated deduction. In contrast to automated and interactive theorem provers whose focus
+is the construction of proofs, gapt concentrates on the transformation and further processing
+of proofs. In particular, it has the following features:
+</p>
+
+<ul>
+<li>Formulas and sequent calculus proofs for first-oder logic, higher-order logic, and schematic formulas including equality reasoning and definitions</li>
+<li>Resolution refutations, expansion proofs</li>
+<li>Scriptable command-line interface</li>
+<li>Graphical user interface for viewing and transforming sequent calculus proofs, expansion proofs, etc.</li>
+<li>Basic proof transformations like regularization, Skolemization, interpolation, etc.</li>
+<li>Translations between the implemented proof calculi</li>
+<li>Gentzen-style cut-elimination</li>
+<li><a href="http://www.logic.at/ceres/">Cut-Elimination by Resolution (ceres)</a></li>
+<li>Cut-Introduction</li>
+<li>A resolution theorem prover: <a href="http://www.logic.at/atp/">ATP</a></li>
+<li>Import from and export to:
+<ul>
+<li>the resolution theorem prover <a href="http://www.cs.unm.edu/~mccune/prover9/">prover9</a></li>
+<li>the SMT-solver <a href="http://www.verit-solver.org/">veriT</a></li>
+<li>the SAT-solver <a href="http://minisat.se/">minisat</a></li>
+<!-- what about MaxSAT solver? -->
+</ul>
+</li>
+</ul>
+
+
+<h2>Releases</h2>
+
+<p>
+The latest release is version 1.9, dated 2014-08-29: <a href="http://www.logic.at/gapt/downloads/gapt-1.9.zip">download</a>
+</p>
+
+<!-- ?link to user's guide -->
+
+<!--
+Previous releases:
+
+1.8
+
+1.7
+-->
+
+<h2>Development</h2>
+
+<p>
+Gapt is implemented in scala. Development of gapt is carried out
+on github, see our <a href="https://github.com/gapt/gapt">github repository</a>.
+The <a href="https://github.com/gapt/gapt/wiki">developer wiki</a> contains more detailed
+information.
+</p>
+
+<h2>Publications</h2>
+
+<p>
+The following is a list of publications related to the system. Some of them describe proof-theoretic algorithms
+which are implemented in gapt, others describe a feature of the system or report on experiments carried
+out using gapt.
+</p>
+
+<ul>
+<li>
+S. Hetzl, A. Leitsch, G. Reis and D. Weller: <em>Algorithmic introduction of quantified cuts</em>,
+Theoretical Computer Science, 549, 1-16, 2014.
+</li>
+<li>
+T. Libal, M. Riener, M. Rukhaia: <em>Advanced Proof Viewing in ProofTool</em>, UITP 2014, 35-47.
+</li>
+<li>
+S. Hetzl, A. Leitsch, G. Reis, J. Tapolczai and D. Weller: <em>Introducing Quantified Cuts in Logic with Equality</em>
+International Joint Conference in Automated Reasoning (IJCAR) 2014, S. Demri, D. Kapur and C. Weidenbach (eds.), Springer LNCS 8562.
+</li>
+<li>
+C. Dunchev, A. Leitsch, T. Libal, M. Riener, M. Rukhaia, D. Weller, B. Woltzenlogel Paleo: PROOFTOOL: a GUI for the GAPT Framework. UITP 2013, 1-14.
+</li>
+<li>
+S. Hetzl, T. Libal, M. Riener, and M. Rukhaia: <em>Understanding Resolution Proofs through Herbrand's Theorem</em>,
+Automated Reasoning with Analytic Tableaux and Related Methods (Tableaux 2013), D. Galmiche and
+D. Larchey-Wendling (eds.), Springer LNCS 8123.
+</li>
+<li>
+S. Hetzl: <em>Project Presentation: Algorithmic Structuring and Compression of Proofs (ASCOP)</em>,
+Conferences on Intelligent Computer Mathematics (CICM) 2012, J. Jeuring et al. (eds.), Springer LNAI 7362.
+</li>
+<li>
+S. Hetzl, A. Leitsch and D. Weller: <em>Towards Algorithmic Cut-Introduction</em>,
+Logic for Programming, Artificial Intelligence and Reasoning (LPAR-18), N. Bj&oslash;rner, A. Voronkov (eds.), Springer LNCS 7180.
+</li>
+<li>
+S. Hetzl, A. Leitsch, D. Weller: <em>CERES in Higher-Order Logic</em>, Annals of Pure and Applied Logic 162(12), 1001-1034, 2011
+</li>
+<li>
+M. Baaz, A. Leitsch: <em>Cut-elimination and Redundancy-elimination by Resolution</em>, Journal of Symbolic Computation 29(2),
+149-177, 2000.
+</li>
+</ul>
+
+<h2>Support</h2>
+
+<ul>
+<li>Vienna Science and Technology Fund (WWTF) via the <a href="http://wwtf.at/projects/research_groups/details/index.php?PKEY=3859_DE_O&lang=EN">Vienna Research Group VRG12-04: Structure and Expressivity</a></li>
+<li>Austrian Science Fund (FWF) project no. P25160: <a href="http://www.logic.at/staff/hetzl/ascop/">Algorithmic Structuring and Compression of Proofs</a></li>
+<li>Austrian Science Fund (FWF) project no. P24300: Proof Transformations via Cut-Elimination in Intuitionistic Logic</li>
+<li>joint French-Austrian ANR/FWF project no. I 383: <a href="http://logic.at/asap/">About Schemata and Proofs</a></li>
+<li>Austrian Science Fund (FWF) project no. P22028: Proof-theoretic applications of CERES</li>
+<li>Georgian Shota Rustaveli National Science Foundation (SRNSF) project no. PG/6/4-102/13: Theorem Proving in Formula Schemata</li>
+<li>Georgian Shota Rustaveli National Science Foundation (SRNSF) project no. FR/51/4-102/13: Automated and Interactive Theorem Proving in Schemata and Unranked Logics.</li>
+</ul>
+
+<hr>
+
+<table width="100%">
+<tr>
+<td align="left" class="smallfont">Last Change: 2015-02-03</td>
+<td align="right">
+<a href="http://validator.w3.org/check/referer">
+<img border="0" src="valid-html401.png" align="middle" alt="Valid HTML 4.01!" height="31" width="88">
+</a>
+</td></tr>
+</table>
+
+</div>
+</div>
+
+</body>
+</html>
