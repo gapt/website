@@ -4,4 +4,5 @@
 #
 DESTDIR=/home/httpd/html/gapt
 
+chmod 664 index.html logo.png style.css valid-html401.png
 cp index.html logo.png style.css valid-html401.png $DESTDIR
