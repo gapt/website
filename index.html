@@ -34,7 +34,7 @@ of proofs. In particular, it has the following features:
 </p>
 
 <ul>
-<li>Formulas and sequent calculus proofs for first-order logic, higher-order logic, and schematic formulas including equality reasoning and definitions</li>
+<li>Formulas and sequent calculus proofs for first-order and higher-order logic including equality reasoning and definitions</li>
 <li>Resolution refutations, expansion proofs</li>
 <li>Scriptable command-line interface</li>
 <li>Graphical user interface for viewing and transforming sequent calculus proofs, expansion proofs, etc.</li>
@@ -43,13 +43,31 @@ of proofs. In particular, it has the following features:
 <li>Gentzen-style cut-elimination</li>
 <li><a href="http://www.logic.at/ceres/">Cut-Elimination by Resolution (ceres)</a></li>
 <li>Cut-Introduction</li>
-<li>Import from and export to:
+<li>Interfaces to automated reasoning tools:
 <ul>
-<li>the resolution theorem prover <a href="http://www.cs.unm.edu/~mccune/prover9/">prover9</a></li>
-<li>the connection-based theorem prover <a href="http://www.leancop.de/">leanCoP</a></li>
-<li>the SMT-solver <a href="http://www.verit-solver.org/">veriT</a></li>
-<li>the SAT-solver <a href="http://minisat.se/">minisat</a></li>
-<!-- what about MaxSAT solver? -->
+  <li>resolution provers (all with proof import):
+    <a href="http://www.cs.unm.edu/~mccune/prover9/">Prover9</a>,
+    <a href="http://eprover.org/">E</a>,
+    <a href="http://www.vprover.org/">Vampire</a>,
+    <a href="http://www.spass-prover.org/">SPASS</a>
+  </li>
+<li>the connection-based theorem prover <a href="http://www.leancop.de/">leanCoP</a> (with proof import)</li>
+<li>SMT-solvers for QF_UF:
+  <a href="http://www.verit-solver.org/">veriT</a> (with proof import),
+  <a href="https://github.com/Z3Prover/z3">Z3</a>,
+  <a href="http://cvc4.cs.nyu.edu/web/">CVC4</a>
+</li>
+<li>SAT-solvers:
+  <a href="http://minisat.se/">minisat</a>,
+  <a href="http://www.labri.fr/perso/lsimon/glucose/">Glucose</a>,
+  <a href="http://sat4j.org/">Sat4j</a>,
+  and any DIMACS-compliant solver
+</li>
+<li>MaxSAT-solvers:
+  <a href="http://sat.inesc-id.pt/open-wbo/">OpenWBO</a>,
+  <a href="http://sat4j.org/">Sat4j</a>,
+  <a href="https://github.com/msakai/toysolver">toysolver</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -58,7 +76,9 @@ of proofs. In particular, it has the following features:
 <h2>Releases</h2>
 
 <p>
-The latest release is version 2.0, dated 2016-01-18: <a href="downloads/gapt-2.0.tar.gz">download</a>
+  The latest release is version 2.0, dated 2016-01-18: <a href="downloads/gapt-2.0.tar.gz">download</a>.
+  See the <a href="https://github.com/gapt/gapt/blob/master/RELEASE-NOTES.md">release
+  notes</a> for details on the latest changes.
 </p>
 
 <table>
@@ -158,7 +178,7 @@ M. Baaz, A. Leitsch: <em>Cut-elimination and Redundancy-elimination by Resolutio
 
 <hr>
 
-<p class="smallfont">Last Change: 2016-01-27</p>
+<p class="smallfont">Last Change: 2016-03-23</p>
 
 </div>
 </div>
