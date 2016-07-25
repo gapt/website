@@ -1,0 +1,5 @@
+cd /gapt
+put index.html
+put logo.png
+put style.css
+put ribbon.css

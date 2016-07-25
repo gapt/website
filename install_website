@@ -1,7 +1,8 @@
-#!/bin/bash
-#
-# execute this from your logic.at account to install the website
-#
-DESTDIR=/home/httpd/html/gapt
-
-install -m664 index.html logo.png style.css ribbon.css $DESTDIR/
+#!/usr/bin/env bash
+if [ -z "$1" ]; then
+  echo Usage: ./install_website username
+  echo
+  echo username is your user name on finn.logic.at
+  exit 1
+fi
+sftp -b install_website.sftp-batch $1@finn.logic.at
