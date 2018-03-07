@@ -1,5 +1,6 @@
 cd /gapt
 put index.html
+put release_archive.html
 put logo.png
 put style.css
 put ribbon.css
