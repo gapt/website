@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+
+# This script probably won't work on your local machine
+# as finn.logic.at is only reachable from rick.logic.at.
+# Thus, to install the website we recommend to ssh into
+# rick.logic.at (with the same user), then clone the
+# gapt-website repository there and then run the script
+
 if [ -z "$1" ]; then
   echo Usage: ./install_website username
   echo
