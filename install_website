@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-# This script probably won't work on your local machine
-# as finn.logic.at is only reachable from rick.logic.at.
-# Thus, to install the website we recommend to ssh into
-# rick.logic.at (with the same user), then clone the
-# gapt-website repository there and then run the script
-
 if [ -z "$1" ]; then
   echo Usage: ./install_website username
   echo
-  echo username is your user name on finn.logic.at
+  echo username is your user name on rick.logic.at and finn.logic.at
   exit 1
 fi
-sftp -b install_website.sftp-batch $1@finn.logic.at
+# we cannot use jump hosts to connect to finn.logic.at via rick.logic.at
+# as finn.logic.at does not provide shell access
+# thus we upload the website into a temporary directory on rick and run
+# the sftp script from there
+remote_temp_dir="/tmp/gapt-website-$$"
+scp $(git ls-files) "$1@rick.logic.at:$remote_temp_dir/"
+ssh $1@rick.logic.at "cd $remote_temp_dir; sftp -b install_website.sftp-batch $1@finn.logic.at; rm -rf $remote_temp_dir"
