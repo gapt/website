@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 if [ -z "$1" ]; then
   echo Usage: ./install_website username
   echo
@@ -12,4 +14,15 @@ fi
 # the sftp script from there
 remote_temp_dir="/tmp/gapt-website-$$"
 scp $(git ls-files) "$1@rick.logic.at:$remote_temp_dir/"
-ssh $1@rick.logic.at "cd $remote_temp_dir; sftp -b install_website.sftp-batch $1@finn.logic.at; rm -rf $remote_temp_dir"
+ssh $1@rick.logic.at << END_SSH
+cd $remote_temp_dir
+sftp $1@finn.logic.at << END_FTP
+cd /shared/groupshares/gapt
+put index.html
+put release_archive.html
+put logo.png
+put style.css
+put ribbon.css
+END_FTP
+rm -rf $remote_temp_dir
+END_SSH
